@@ -9,3 +9,7 @@ variable "sample_age" {
 variable "sample_check" {
   default = true
 }
+
+variable "sample_list" {
+  default = [100, true, "Ashok"]
+}

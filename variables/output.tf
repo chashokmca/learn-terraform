@@ -9,3 +9,7 @@ output "sample_age" {
 output "sample_check" {
   value = var.sample_check
 }
+
+output "sample_list_name" {
+  value = var.sample_list[2]
+}
