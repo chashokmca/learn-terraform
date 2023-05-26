@@ -13,3 +13,7 @@ variable "sample_check" {
 variable "sample_list" {
   default = [100, true, "Ashok"]
 }
+
+variable "sample_dict" {
+  default = { age = 100, check=true, name="Ashok"}
+}

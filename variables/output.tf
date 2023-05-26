@@ -13,3 +13,7 @@ output "sample_check" {
 output "sample_list_name" {
   value = var.sample_list[2]
 }
+
+output "sample_dict_name" {
+  value = var.sample_list["name"]
+}
