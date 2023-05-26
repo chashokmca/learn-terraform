@@ -1,3 +1,7 @@
+variable "components" {
+  default = ["frontend", "mongodb"]
+}
+
 data "aws_ami" "centos" {
   owners = ["973714476881"]
   most_recent = true
@@ -5,6 +9,7 @@ data "aws_ami" "centos" {
 }
 
 resource "aws_instance" "frontend" {
+  count   = length(vars.components)
   ami           = data.aws_ami.centos.image_id
   instance_type = "t2.micro"
 
