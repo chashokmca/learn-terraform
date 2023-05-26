@@ -1,5 +1,5 @@
 resource "aws_instance" "frontend" {
-  ami           = "ami-005e54dee72cc1d00" # us-west-2
+  ami           = "ami-0b5a2b5b8f2be4ec2" # us-west-2
   instance_type = "t2.micro"
 
   tags = {
