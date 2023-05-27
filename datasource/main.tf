@@ -14,3 +14,9 @@ data "aws_security_group" "select" {
 output "security_group_sel" {
   value=data.aws_security_group.select
 }
+
+data "aws_security_groups" "groups" {}
+
+output "aws_security_groups" {
+  value = data.aws_security_groups.groups
+}
