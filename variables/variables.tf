@@ -19,3 +19,5 @@ variable "sample_dict" {
 }
 
 variable "env" {}
+variable "age" {}
+variable "status" {}

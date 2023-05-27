@@ -21,3 +21,11 @@ output "sample_dict_name" {
 output "env" {
   value = var.env
 }
+
+output "age" {
+  value = var.age
+}
+
+output "status" {
+  value = var.status
+}
