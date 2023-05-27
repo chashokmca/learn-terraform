@@ -19,7 +19,7 @@ data "aws_security_groups" "groups" {}
 
 data "aws_security_group" "group" {
   count = length(data.aws_security_groups.groups.ids)
-  id = data.aws_security_groups.groups.id[count.index]
+  id = data.aws_security_groups.groups[count.index].id
 }
 
 output "aws_security_groups" {
