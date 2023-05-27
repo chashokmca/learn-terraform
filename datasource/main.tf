@@ -17,11 +17,15 @@ output "security_group_sel" {
 
 data "aws_security_groups" "groups" {}
 
-data "aws_security_group" "group" {
-  count = length(data.aws_security_groups.groups.ids)
-  id = data.aws_security_groups.groups[count.index].id
+output "aws_security_groups" {
+  value = data.aws_security_groups.groups
 }
 
-output "aws_security_groups" {
+data "aws_security_group" "group" {
+  count = length(data.aws_security_groups.groups.ids)
+  id = data.aws_security_groups.groups.ids[count.index]
+}
+
+output "aws_security_group" {
   value = data.aws_security_group.group
 }
