@@ -34,11 +34,28 @@ resource "null_resource" "fruits1" {
   }
 }
 
+variable "fruits2" {
+  default = {
+    apple={
+      name="apple"
+      count=100
+    }
+    banana= {
+      name="banana"
+      count=200
+    }
+    gape= {
+      name  = "gape"
+      count = 300
+    }
+  }
+}
+
 resource "null_resource" "fruits2" {
-  count = length(var.fruits1)
+  for_each = var.fruits2
 
   provisioner "local-exec" {
-    command = "echo ${count.index}"
+    command = "echo ${each.key} -----  ${each.value}"
   }
 }
 
