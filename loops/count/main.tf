@@ -34,3 +34,11 @@ resource "null_resource" "fruits1" {
   }
 }
 
+resource "null_resource" "fruits2" {
+  count = length(var.fruits1)
+
+  provisioner "local-exec" {
+    command = "echo ${var.fruits1[count.index]}"
+  }
+}
+
