@@ -17,3 +17,5 @@ variable "sample_list" {
 variable "sample_dict" {
   default = { age = 100, check=true, name="Ashok"}
 }
+
+variable "env" {}

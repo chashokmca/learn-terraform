@@ -17,3 +17,7 @@ output "sample_list_name" {
 output "sample_dict_name" {
   value = var.sample_dict["name"]
 }
+
+output "env" {
+  value = var.env
+}
