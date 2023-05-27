@@ -7,7 +7,7 @@ resource "null_resource" "null1" {
 }
 
 resource "null_resource" "fruits" {
-  count= length(var.fruits)
+  count = length(var.fruits)
 
   provisioner "local-exec" {
     command = "echo ${var.fruits[count.index]}"
