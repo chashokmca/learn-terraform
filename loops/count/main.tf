@@ -45,7 +45,7 @@ variable "fruits2" {
       count=200
     }
     grape= {
-      name  = "gape"
+      name  = "grape"
       count = 300
     }
   }
