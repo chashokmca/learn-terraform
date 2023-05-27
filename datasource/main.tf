@@ -23,5 +23,5 @@ data "aws_security_group" "group" {
 }
 
 output "aws_security_groups" {
-  value = data.aws_security_group.group.description
+  value = data.aws_security_group.group[count.index].description
 }
