@@ -8,7 +8,7 @@ output "security_group" {
 
 
 data "aws_security_group" "select" {
-  name = "allow_all"
+  name = "allow-all"
 }
 
 output "security_group_sel" {
