@@ -17,3 +17,20 @@ resource "null_resource" "fruits" {
 variable "fruits" {
   default = ["apple", "banana", "grape"]
 }
+
+variable "fruits1" {
+  default = {
+    apple=100
+    banana=200
+    gape=500
+  }
+}
+
+resource "null_resource" "fruits1" {
+  for_each = var.fruits1
+
+  provisioner "local-exec" {
+    command = "echo ${each.key} ----  ${each.value}"
+  }
+}
+
