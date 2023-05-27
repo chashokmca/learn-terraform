@@ -27,5 +27,6 @@ data "aws_security_group" "group" {
 }
 
 output "aws_security_group" {
-  value = data.aws_security_group.group[0]
+
+  value = data.aws_security_group.group.name == "allow-all" ?
 }
