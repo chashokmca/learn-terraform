@@ -5,3 +5,12 @@ data "aws_security_group" "selected" {
 output "security_group" {
   value=data.aws_security_group.selected.description
 }
+
+
+data "aws_security_group" "select" {
+  name = "allow_all"
+}
+
+output "security_group_sel" {
+  value=data.aws_security_group.select
+}
