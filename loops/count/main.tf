@@ -1,4 +1,4 @@
-resource "null_resource" "null" {
+/*resource "null_resource" "null" {
   count = 10
 }
 
@@ -32,7 +32,7 @@ resource "null_resource" "fruits1" {
   provisioner "local-exec" {
     command = "echo ${each.key} ----  ${each.value}"
   }
-}
+}*/
 
 variable "fruits2" {
   default = {
