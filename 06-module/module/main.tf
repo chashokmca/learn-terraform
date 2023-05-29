@@ -5,3 +5,4 @@ resource "null_resource" "nothing" {
 }
 
 variable "input" {}
+variable "name" {}
