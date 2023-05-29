@@ -7,6 +7,14 @@ output "sample" {
   value = upper(var.sample)
 }
 
+variable "sample3" {
+  default = "ABCXYZ"
+}
+
+output "sample3" {
+  value = lower(var.sample)
+}
+
 variable "sample1" {
   default = ["abc", "xyz"]
 }
